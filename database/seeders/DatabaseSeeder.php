@@ -38,6 +38,11 @@ class DatabaseSeeder extends Seeder
                 "name" => "Comedy",
                 "city" => "London",
                 "summary" => "Comedy is meant to make people laugh."
+            ],
+            [
+                "name" => "Romance",
+                "city" => "Paris",
+                "summary" => "Love is the most wonderful emotion that everybody should experience."
             ]
         ]);
 
@@ -68,6 +73,16 @@ class DatabaseSeeder extends Seeder
         $book_1->genre_id = 1;
         $book_1->author_id = 1;
         $book_1->save();
+
+        $book_2 = new Book;
+        $book_2->title = "Pored puta";
+        $book_2->isbn = "12354345";
+        $book_2->publisher = "Laguna izdavac";
+        $book_2->price = 999;
+        $book_2->year = 1965;
+        $book_2->genre_id = 1;
+        $book_2->author_id = 1;
+        $book_2->save();
 
         Book::create([
             "title" => "Zlatni leptir",
